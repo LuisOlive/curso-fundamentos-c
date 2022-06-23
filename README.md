@@ -1,59 +1,47 @@
-# curso-fundamentos-c
+# Interaccion con el usuario
 
-## Horarios:
+## Imporante
 
-Entre semana: **2 - 5 PM**
+Se requiere usar la libreria stdio.h
 
-## Temario
+## Mostrar cosas en consola
 
-- **22/Jun** 
-  - **Instalaciones**
-  - **Variables:**
-    - tipos de datos
-    - transformación de tipos
-    - constantes
-    - #define
-    - buenas prácticas
-  - **Funciones:** 
-    - sintaxis
-    - parámetros
-    - retornos
-    - scope
-    - variables estáticas
-    - buenas prácticas
-- **23/jun**
-  - **Sentencias**
-    - if / else + operadores de comparación
-    - switch case
-    - while, do while, for
-- **24/jun** Ejercicios
-- **27/jun**
-  - **Arrays** 
-    - Sintaxis
-    - Funciones con arrays
-    - Impresión
-    - Llenado
-    - Ordenamiento
-      - Método de la burbuja
-      - Método de inserción
-      - Método de selección
-    - Buenas practicas
-- **28/jun**
-  - **Matrices**
-    - Sintaxis
-    - Funciones con matrices
-    - Impresión
-    - Llenado
-    - Suma 
-    - Buenas prácticas
-- **29**
-  - **Posicionamientos en matrices usando for**
-    - Producto de matrices
-    - Determinante de una matriz
-- **30**
-  - **Punteros**
-    - Memoria
-    - Peso de las variables
-    - punteros a variables
-    - Paso por valor y paso por referencia
-- **1/Jul Ejercicios o Structs dependiendo que necesiten**
+Para mostrar puro texto en consola se usa la funcion puts()
+
+```c
+puts("Hola, mundo");
+```
+
+Para mostrar valores de variables en consola se usa la funcion printf()
+
+```c
+printf("El valor de mi variable es %f", miVariable);
+```
+
+otra diferencia es que el printf no salta de la linea en la que escribe y puts sí
+
+donde %f es el tipo de formato con que se decea imprimir, dependiendo el tipo de variable se elige el simbolo que se emplea
+
+```
+%d es para enteros
+%s es para cadenas de texto
+%c es para caracteres
+%f es para decimales
+%x es para numeros en hexadecimal
+```
+
+si te equivocas, los datos solo se muestran transformados al tipo que se escribio
+
+los decimales se pueden formatear empleando numeros en los flotantes
+
+## Pedir datos al usuario
+
+Por ahora, solo pedirmeos numeros
+
+Se hace empleando la funcion scanf()
+
+```c
+float miVariable;
+scanf("%f", &miVariable);
+// miVariable ya vale lo que ingrese el usuario
+```
